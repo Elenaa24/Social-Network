@@ -1,0 +1,24 @@
+.bodybg{
+    -fx-background-image: url('poza6.png');
+    -fx-background-size: 100% 100%;
+}
+/*.text-field.error {*/
+/*    -fx-border-color: blue ;*/
+/*    -fx-border-width: 0px ;*/
+/*}*/
+.buttonn{
+    -fx-background-image: url('notification.jpg');
+    -fx-background-size: 35 26;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+}
+
+.list-cell{
+    -fx-background-image: url('lila.png');
+    -fx-background-size: 100% 100%;
+}
+
+.table-view {
+    -fx-table-cell-border-color: transparent;
+}
+

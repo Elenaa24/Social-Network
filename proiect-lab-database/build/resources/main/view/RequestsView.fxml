@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RequestsController">
+   <children>
+      <TableView fx:id="TableRequests" blendMode="MULTIPLY" layoutX="34.0" layoutY="71.0" prefHeight="414.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="FirstNameColumn" prefWidth="75.0" text="FirstName" />
+          <TableColumn fx:id="LastNameColumn" prefWidth="75.0" text="LastName" />
+            <TableColumn fx:id="StatusColumn" prefWidth="94.19999694824219" text="Status" />
+            <TableColumn fx:id="DataColumn" prefWidth="122.60003662109375" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="634.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="537.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleDeleteRequest" text="Delete">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label layoutX="169.0" layoutY="23.0" text="My Requests">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

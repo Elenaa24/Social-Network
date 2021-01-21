@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewAccount">
+   <children>
+      <TextField fx:id="secondname" layoutX="21.0" layoutY="176.0" promptText="          Second Name" />
+      <TextField fx:id="firstname" layoutX="21.0" layoutY="124.0" promptText="             First Name" />
+      <TextField fx:id="username" layoutX="237.0" layoutY="124.0" promptText="            Username" />
+      <ImageView fitHeight="95.0" fitWidth="116.0" layoutX="153.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@default-user-image.png" />
+         </image></ImageView>
+      <Button blendMode="OVERLAY" layoutX="153.0" layoutY="223.0" mnemonicParsing="false" onAction="#handlerPhoto" text="Upload Photo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button blendMode="OVERLAY" layoutX="174.0" layoutY="261.0" mnemonicParsing="false" onAction="#handlerCreate" text="Create">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="password" layoutX="237.0" layoutY="176.0" promptText="            Password" />
+   </children>
+</AnchorPane>

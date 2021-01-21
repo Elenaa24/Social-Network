@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane blendMode="MULTIPLY" prefHeight="500.0" prefWidth="700.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsMessagesController">
+   <children>
+      <Button layoutX="76.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleDownload" text="Download PDF">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="94.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleGenerate" text="Generate">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <BarChart fx:id="barChart" blendMode="MULTIPLY" layoutX="237.0" layoutY="14.0" prefHeight="410.0" prefWidth="462.0">
+        <xAxis>
+          <CategoryAxis fx:id="dateAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="numberAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <DatePicker fx:id="Begin" layoutX="45.0" layoutY="36.0" />
+      <DatePicker fx:id="End" layoutX="46.0" layoutY="79.0" />
+      <Label layoutX="13.0" layoutY="40.0" text="Begin">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="83.0" text="End">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="621.0" layoutY="451.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+      <TableView fx:id="usersTable" blendMode="MULTIPLY" layoutX="21.0" layoutY="250.0" prefHeight="219.0" prefWidth="211.0" stylesheets="@stylee.css">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="101.20000457763672" text="Nume" />
+          <TableColumn fx:id="last_name" prefWidth="107.40003204345703" text="Prenume" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

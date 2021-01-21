@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="507.0" prefWidth="702.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MessengerController">
+   <children>
+      <TableView fx:id="conversationsTable" blendMode="MULTIPLY" layoutX="2.0" layoutY="14.0" onMouseClicked="#handlerSelect" prefHeight="152.0" prefWidth="702.0">
+        <columns>
+          <TableColumn fx:id="ColumnConv" prefWidth="698.800042629242" styleClass="stylee.css" text="Conversations" />
+        </columns>
+      </TableView>
+      <TableView fx:id="MessageTable" blendMode="MULTIPLY" layoutX="2.0" layoutY="166.0" prefHeight="202.0" prefWidth="702.0" stylesheets="@stylee.css">
+        <columns>
+          <TableColumn fx:id="FromColumn" prefWidth="83.19999551773071" text="From" />
+          <TableColumn fx:id="MessageColumn" prefWidth="449.80004119873047" text="Message" />
+            <TableColumn fx:id="TimeColumn" prefWidth="164.5999755859375" text="Time" />
+        </columns>
+      </TableView>
+      <Button fx:id="ButtonReply" layoutX="159.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleButtonReply" text="Reply">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TextField fx:id="txtReply" layoutX="65.0" layoutY="410.0" prefHeight="26.0" prefWidth="221.0" promptText="                      Reply">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMessage" layoutX="385.0" layoutY="410.0" prefHeight="26.0" prefWidth="221.0" promptText="                   Message">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTo" layoutX="385.0" layoutY="370.0" prefHeight="26.0" prefWidth="221.0" promptText="                         To">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ButtonSend" layoutX="469.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleButtonSend" text="Send">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="636.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

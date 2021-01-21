@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartMenuController">
+   <children>
+      <TextField fx:id="txt_username" layoutX="263.0" layoutY="171.0" prefHeight="38.0" prefWidth="214.0" promptText="Username">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></TextField>
+      <Button fx:id="LogInButton" blendMode="MULTIPLY" layoutX="329.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleButtonLogInClick" prefHeight="38.0" prefWidth="84.0" text="LOG IN">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button blendMode="MULTIPLY" layoutX="274.0" layoutY="349.0" mnemonicParsing="false" onAction="#handlerCreate" prefHeight="38.0" prefWidth="194.0" text="CREATE AN ACCOUNT" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="txt_password" layoutX="264.0" layoutY="231.0" promptText="Password">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </PasswordField>
+      <ImageView fitHeight="103.0" fitWidth="145.0" layoutX="290.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/login_in_pisi.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventsController">
+   <children>
+      <Button blendMode="DARKEN" layoutX="635.0" layoutY="460.0" mnemonicParsing="false" onAction="#handlerBack" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="tableEvent" blendMode="MULTIPLY" layoutY="46.0" onMouseClicked="#handlerSelectEvent" prefHeight="236.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="109.00000303983688" text="Name" />
+            <TableColumn fx:id="hostColumn" prefWidth="103.80001831054688" text="Host" />
+            <TableColumn fx:id="participantsColumn" minWidth="0.0" prefWidth="234.39999389648438" text="Participants" />
+            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="136.0" text="Date" />
+            <TableColumn fx:id="statusColumn" minWidth="0.0" prefWidth="113.39996337890625" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="unsubscribe" blendMode="DARKEN" layoutX="100.0" layoutY="313.0" mnemonicParsing="false" onAction="#handlerUnsubscribe" text="Unsubscribe">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="going" blendMode="DARKEN" layoutX="525.0" layoutY="377.0" mnemonicParsing="false" onAction="#handlerGoing" text="Going">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="subscribe" blendMode="DARKEN" layoutX="108.0" layoutY="377.0" mnemonicParsing="false" onAction="#handlerSubscribe" text="Subscribe">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="notgoing" blendMode="DARKEN" layoutX="511.0" layoutY="313.0" mnemonicParsing="false" onAction="#handlerNotGoing" text="Not going">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

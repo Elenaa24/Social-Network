@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="NotificationsButton" prefHeight="500.0" prefWidth="700.0" styleClass="bodybg" stylesheets="@stylee.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserMenuController">
+   <children>
+      <TableView fx:id="tableView" blendMode="MULTIPLY" cache="true" layoutX="28.0" layoutY="152.0" prefHeight="303.0" prefWidth="248.0" stylesheets="@stylee.css">
+        <columns>
+          <TableColumn fx:id="nume" prefWidth="123.59999656677246" text="Nume" />
+          <TableColumn fx:id="prenume" prefWidth="117.80001831054688" text="Prenume" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <TextField fx:id="txt_search" layoutX="28.0" layoutY="84.0" onKeyTyped="#handleSearch" promptText="               search">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </TextField>
+      <CheckBox fx:id="checkfriend" layoutX="69.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleButtonFriendCheck" prefHeight="20.0" prefWidth="83.0" text="Friends">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="buttonAddFriend" blendMode="MULTIPLY" layoutX="14.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleButtonAddFriend" text="Add friend">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonRemoveFriend" blendMode="MULTIPLY" layoutX="202.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleButtonRemoveFriend" text="Remove Friend">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tableViewRequests" blendMode="MULTIPLY" layoutX="305.0" layoutY="152.0" prefHeight="303.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="nume_request" prefWidth="86.20001220703125" text="Nume" />
+          <TableColumn fx:id="prenume_request" prefWidth="92.20001220703125" text="Prenume" />
+            <TableColumn fx:id="data_request" prefWidth="94.79998779296875" text="Data" />
+            <TableColumn fx:id="status_request" prefWidth="97.20001220703125" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="427.0" layoutY="121.0" prefHeight="22.0" prefWidth="130.0" text="Friend Requests">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonReject" blendMode="MULTIPLY" layoutX="527.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleReject" text="Reject">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonAccept" blendMode="MULTIPLY" layoutX="394.0" layoutY="463.0" mnemonicParsing="false" onAction="#handleButtonAccept" text="Accept">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <MenuBar blendMode="MULTIPLY" layoutY="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Requests">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleShowRequests" text="Show My Requests" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Messenger">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleButtonMess" text="Show Conversations" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Account">
+            <items>
+              <MenuItem fx:id="LogOut" mnemonicParsing="false" onAction="#handleButtonBackToStart" text="Log Out" />
+                  <MenuItem fx:id="Reports" mnemonicParsing="false" onAction="#handlebuttonReports" text="Reports" />
+                  <MenuItem fx:id="Reports1" mnemonicParsing="false" onAction="#handlebuttonReports1" text="Reports_Messages" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Events">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowEvents" text="Show Events" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleCreateEvent" text="Create Event" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="image" fitHeight="110.0" fitWidth="174.0" layoutX="492.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="name" alignment="TOP_CENTER" blendMode="MULTIPLY" layoutX="252.0" layoutY="57.0" prefHeight="30.0" prefWidth="196.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="notificationsButton" alignment="CENTER_RIGHT" blendMode="MULTIPLY" layoutX="15.0" layoutY="36.0" mnemonicParsing="false" onAction="#handlerNotButton" onMouseExited="#handlerExit" prefHeight="26.0" prefWidth="53.0" styleClass="buttonn" stylesheets="@stylee.css" />
+      <ListView fx:id="eventlist" layoutX="15.0" layoutY="60.0" prefHeight="110.0" prefWidth="401.0" stylesheets="@stylee.css" visible="false">
+         <styleClass>
+            <String fx:value="list-cell" />
+            <String fx:value="table-view" />
+         </styleClass></ListView>
+       <Pagination fx:id="page" blendMode="MULTIPLY" layoutX="73.0" layoutY="456.0" onMouseClicked="#pageHandler" pageCount="2" prefHeight="20.0" prefWidth="158.0" />
+   </children>
+</AnchorPane>
